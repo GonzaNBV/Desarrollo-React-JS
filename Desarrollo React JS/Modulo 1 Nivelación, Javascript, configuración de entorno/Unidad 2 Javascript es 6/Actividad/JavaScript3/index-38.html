@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imágenes Interactivas</title>
+</head>
+<body>
+    <img src="https://w.wallhaven.cc/full/we/wallhaven-weqmkp.png" alt="Imagen 1" class="imagen" height="100px">
+    <img src="https://w.wallhaven.cc/full/39/wallhaven-3962ov.jpg" alt="Imagen 2" class="imagen" height="100px">
+    <img src="https://w.wallhaven.cc/full/5g/wallhaven-5g22q5.png" alt="Imagen 3" class="imagen" height="100px">
+
+    <script>
+        const imagenes = document.querySelectorAll('.imagen');
+        imagenes.forEach(imagen => {
+            imagen.addEventListener('click', () => {
+                imagenes.forEach(img => img.style.height = '100px');
+                imagen.style.height = '500px';
+            });
+        });
+    </script>
+</body>
+</html>

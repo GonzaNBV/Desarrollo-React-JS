@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Preguntas de Matemáticas</title>
+</head>
+<body>
+    <span id="pregunta">Si tienes 10 chupetines y los repartes entre 3 amigos, ¿cuántos chupetines quedan sin repartir?</span>
+    <span id="respuesta"></span>
+    <br>
+    
+    <button onclick="verificarRespuesta(this, 'incorrecta')">2 chupetines</button>
+    <button onclick="verificarRespuesta(this, 'correcta')">1 chupetín</button>
+    <button onclick="verificarRespuesta(this, 'incorrecta')">3 chupetines</button>
+
+    <script>
+        function verificarRespuesta(button, tipo) {
+            const respuestaSpan = document.getElementById('respuesta');
+            const buttons = document.querySelectorAll('button');
+            
+            buttons.forEach(btn => btn.disabled = true);
+            
+            if (tipo === 'correcta') {
+                button.style.backgroundColor = 'green';
+                respuestaSpan.textContent = '¡Respuesta correcta! Quedan 1 chupetín sin repartir.';
+            } else {
+                button.style.backgroundColor = 'red';
+                document.querySelector('button[onclick*="correcta"]').style.backgroundColor = 'green';
+                respuestaSpan.textContent = '¡Respuesta equivocada! La respuesta correcta es 1 chupetín.';
+            }
+        }
+    </script>
+</body>
+</html>

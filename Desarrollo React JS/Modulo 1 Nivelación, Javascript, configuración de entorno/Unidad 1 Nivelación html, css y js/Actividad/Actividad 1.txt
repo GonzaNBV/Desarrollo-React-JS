@@ -1,0 +1,7 @@
+ACTIVIDAD 1
+
+Implementar CSS sobre el HTML desarrollado en la clase para lograr el diseño presentado en la clase.
+
+Link con el código HTML desarrollado en la clase: 
+
+https://github.com/Matu-Dev-JS/TN_VIERNES_UTN_FEBRERO/tree/main/Clase-1-Nivelacion-HTML-CSS-JS

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colores Aleatorios</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Presione la tecla Espacio</h1>
+    <script>
+        document.body.addEventListener('keydown', (event) => {
+            if (event.key === ' ') {
+                const r = Math.floor(Math.random() * 255) + 1;
+                const g = Math.floor(Math.random() * 255) + 1;
+                const b = Math.floor(Math.random() * 255) + 1;
+                document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
+            }
+        });
+    </script>
+</body>
+</html>
